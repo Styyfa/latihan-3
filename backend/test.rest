@@ -1,0 +1,43 @@
+// GET ALL USER
+GET http://localhost:3000/user
+
+###
+// GET ONE USER
+GET http://localhost:3000/user/65ba6c7c5f73b8a365c81c1c
+
+###
+// CREATE USER
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+    "username": "User1",
+    "password": "1111",
+    "confPassword": "1111",
+    "email": "user@gmail.com"
+}
+
+###
+// UPDATE USER
+PUT http://localhost:3000/user/65ba6c7c5f73b8a365c81c1c
+Content-Type: application/json
+
+{
+    "username": "Foxtrot",
+    "password": "123456",
+    "email": "foxx@gmail.com"
+}
+
+###
+// DELETE USER
+DELETE http://localhost:3000/user/65ba6d085f73b8a365c81c2a
+
+###
+// LOGIN USER
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "email": "foxx@gmail.com",
+    "password": "123456"
+}
